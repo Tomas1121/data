@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   const data = input.value;
 
   // Enviar datos al servidor
-  const response = await fetch("http://localhost:3000/data", {
+  const response = await fetch("https://data-khzd.onrender.com/data", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ value: data }),
@@ -35,7 +35,7 @@ function addToList(data) {
 
 // Cargar datos iniciales
 (async () => {
-    const response = await fetch("http://localhost:3000/data");
+    const response = await fetch("https://data-khzd.onrender.com/data");
     const data = await response.json();
   
     // Itera por cada elemento y asegúrate de que se muestre correctamente
